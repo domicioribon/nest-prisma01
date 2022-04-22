@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  db:
+    build: .docker/mariadb
+    restart: always
+    volumes:
+      - ./.docker/dbdata:/var/lib/mysql
+    ports:
+      - "3306:3306"
